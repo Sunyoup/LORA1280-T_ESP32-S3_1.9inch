@@ -1,0 +1,16 @@
+# ESP-IDF build output
+esp-idf/build/
+# Downloaded by the IDF component manager (pinned in dependencies.lock)
+esp-idf/managed_components/
+# Generated from sdkconfig.defaults + menuconfig
+esp-idf/sdkconfig
+esp-idf/sdkconfig.old
+
+# Arduino IDE / arduino-cli
+arduino/**/build/
+
+# Editors / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store

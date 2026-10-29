@@ -1,0 +1,10 @@
+CONFIG_IDF_TARGET="esp32s3"
+
+# RadioLib's ESP-IDF HAL requires a 1 ms tick
+CONFIG_FREERTOS_HZ=1000
+
+# Board: ESP32-S3 with 16 MB flash
+CONFIG_ESPTOOLPY_FLASHSIZE_16MB=y
+
+# Console on the native USB port (/dev/ttyACMx)
+CONFIG_ESP_CONSOLE_USB_SERIAL_JTAG=y

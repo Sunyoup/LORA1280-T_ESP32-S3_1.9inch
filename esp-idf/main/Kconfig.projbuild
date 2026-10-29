@@ -1,0 +1,57 @@
+menu "LoRa SX1280 settings"
+
+    config LORA_FREQ_KHZ
+        int "Center frequency (kHz)"
+        range 2402000 2482000
+        default 2440000
+        help
+            Korean 2.4 GHz band is 2400~2483.5 MHz. Keep the whole signal
+            inside it: use 2402~2482 MHz.
+
+    choice LORA_BW
+        prompt "Bandwidth"
+        default LORA_BW_812
+        help
+            Korean rules (CSS, 2.4 GHz) need an occupied bandwidth of
+            0.5 MHz or more, so 406.25 kHz and below are not offered.
+
+        config LORA_BW_812
+            bool "812.5 kHz"
+        config LORA_BW_1625
+            bool "1625 kHz"
+    endchoice
+
+    config LORA_SF
+        int "Spreading factor (5~10, ranging needs 5~10)"
+        range 5 12
+        default 9
+
+    config LORA_CR
+        int "Coding rate denominator (4/5 .. 4/8)"
+        range 5 8
+        default 7
+
+    config LORA_TX_POWER_DBM
+        int "TX power (dBm)"
+        range -18 13
+        default 7
+        help
+            Korean limit is 10 mW/MHz. With BW 812.5 kHz keep this at
+            10 dBm or below (7 dBm leaves a margin).
+
+    config LORA_TX_INTERVAL_MS
+        int "TX role: interval between packets (ms)"
+        range 100 60000
+        default 1000
+
+    choice APP_DEFAULT_ROLE
+        prompt "Default role (preselected on the role menu)"
+        default APP_DEFAULT_ROLE_TX
+
+        config APP_DEFAULT_ROLE_TX
+            bool "TX"
+        config APP_DEFAULT_ROLE_RX
+            bool "RX"
+    endchoice
+
+endmenu
