@@ -13,9 +13,9 @@ Both use [RadioLib](https://github.com/jgromes/RadioLib) and show live status on
 
 ![RX (left) and TX (right) boards running the ESP-IDF firmware](docs/boards.jpg)
 
-| TX screen | RX screen |
+| RX screen (left) | TX screen (right) |
 |---|---|
-| packet number, status, message, TX time vs. time on air, sent / failed, uptime, battery | packet number, RSSI and SNR bars, message, OK / CRC / lost (%), frequency error, time since last packet, uptime, battery |
+| packet number, RSSI and SNR bars, message, OK / CRC / lost (%), frequency error, time since last packet, uptime, battery | packet number, status, message, TX time vs. time on air, sent / failed, uptime, battery |
 
 ## Hardware
 
@@ -25,6 +25,13 @@ Both use [RadioLib](https://github.com/jgromes/RadioLib) and show live status on
 | NiceRF LORA1280-T | SX1280, 0.5 ppm TCXO (enabled with the TCXOEN pin), up to 12.5 dBm, supports ranging |
 | ESP-12 (ESP8266) breakout board | Used as a 2.0 mm to 2.54 mm adapter for the module (see notes below) |
 | 2.4 GHz antenna | A 31 mm wire (quarter wave) works for bench tests |
+
+### Where to buy
+
+- **ESP32-S3 1.9" LCD board**: [TZT store product page](https://www.tztstore.com/goods/show-8439.html).
+  The same board is also sold on AliExpress.
+- **NiceRF LORA1280-T**: [NiceRF product page](https://www.nicerf.com/lora-module/2-4-ghz-transmitter-and-receiver-lora1281-tcxo.html).
+  It is also available on AliExpress.
 
 ### Wiring
 
@@ -176,7 +183,9 @@ certification (KC in Korea).
 
 - [Semtech SX1280](https://www.semtech.com/products/wireless-rf/lora-24ghz/sx1280) (datasheet,
   AN1200.29 ranging application note)
-- [NiceRF](https://www.nicerf.com/) LoRa1280 module datasheet
+- [NiceRF LORA1280-T / LoRa1281 TCXO](https://www.nicerf.com/lora-module/2-4-ghz-transmitter-and-receiver-lora1281-tcxo.html)
+  (module datasheet)
+- [ESP32-S3 1.9" LCD board (TZT store)](https://www.tztstore.com/goods/show-8439.html)
 - [RadioLib](https://github.com/jgromes/RadioLib)
 - [GFX Library for Arduino](https://github.com/moononournation/Arduino_GFX)
 
