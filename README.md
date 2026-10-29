@@ -183,4 +183,4 @@ certification (KC in Korea).
 ## License
 
 MIT, see [LICENSE](LICENSE). The 5x7 font in `esp-idf/components/lcd_ui/font5x7.h` is from
-Adafruit_GFX and is under the BSD license (full text in [LICENSE](LICENSE)).
+Adafruit_GFX and is under the BSD license; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
